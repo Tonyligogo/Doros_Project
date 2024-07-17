@@ -28,7 +28,7 @@ function NavBar() {
       <ul className={`${!openMenu ? 'top-[62px] opacity-100' :'top-[-400px]'} md:flex md:items-center md:gap-6 z-[-1] md:z-auto md:static absolute bg-white w-full
       md:w-auto md:opacity-100 opacity-0 transition-all ease-in duration-500`}>
         {links.map((link)=>(
-            <li key={link.name} className="my-6 ml-6 md:my-0">
+            <li key={link.name} onClick={()=>setOpenMenu(true)} className="my-6 ml-6 md:my-0">
               <a href={link.href}>{link.name}</a>
             </li>
         ))}
